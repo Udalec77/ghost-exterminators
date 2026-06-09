@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghost Exterminators - Дезинсекция и борьба с грызунами</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="logo">
+        <span class="logo-icon">👻</span>
+        <span class="logo-text">GHOST EXTERMINATORS</span>
+      </div>
+      <ul class="nav-list">
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1 class="hero-title">ГРЫЗУНЫ И НАСЕКОМЫЕ?</h1>
+      <p class="hero-subtitle">Мы их ВЫГОНЯЕМ!</p>
+      <button class="cta-button" onclick="openModal()">📞 Вызвать эксперта 24/7</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="services" class="services">
+      <h2 class="section-title">НАШИ УСЛУГИ</h2>
+      <div class="interactive-grid">
+        <!-- Грызуны -->
+        <div class="flip-card" onclick="toggleCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="card-icon">🐀</div>
+              <h3>ГРЫЗУНЫ</h3>
+              <p>Крысы, мыши, полевки</p>
+              <div class="ghost-overlay">👻</div>
+            </div>
+            <div class="flip-card-back">
+              <h4>ГРЫЗУНЫ</h4>
+              <ul class="pest-list">
+                <li>🐀 Крысы</li>
+                <li>🐭 Мыши</li>
+                <li>🐿️ Полевки</li>
+                <li>🐀 Домашняя крыса</li>
+                <li>🦫 Шиповка (бережно!)</li>
+              </ul>
+              <button class="mini-cta" onclick="event.stopPropagation(); selectCategory('грызуны')">Заказать</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Насекомые -->
+        <div class="flip-card" onclick="toggleCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="card-icon">🪳</div>
+              <h3>НАСЕКОМЫЕ</h3>
+              <p>Тараканы, клопы, муравьи</p>
+              <div class="ghost-overlay">👻</div>
+            </div>
+            <div class="flip-card-back">
+              <h4>НАСЕКОМЫЕ</h4>
+              <ul class="pest-list">
+                <li>🦀 Клопы</li>
+                <li>🪳 Тараканы</li>
+                <li>🐜 Муравьи</li>
+                <li>🦋 Цыплята</li>
+                <li>🛏️ Потерношвы</li>
+              </ul>
+              <button class="mini-cta" onclick="event.stopPropagation(); selectCategory('насекомые')">Заказать</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ящерицы и змеи -->
+        <div class="flip-card" onclick="toggleCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="card-icon">🦎</div>
+              <h3>ХИЩНЫЕ</h3>
+              <p>Ящерицы, змеи, зайцы</p>
+              <div class="ghost-overlay">👻</div>
+            </div>
+            <div class="flip-card-back">
+              <h4>ХИЩНЫЕ</h4>
+              <ul class="pest-list">
+                <li>🦎 Ящерицы</li>
+                <li>🐍 Змеи</li>
+                <li>🐰 Зайцы (не дружат с мебелью)</li>
+                <li>🦔 Ежи (спайки)</li>
+              </ul>
+              <button class="mini-cta" onclick="event.stopPropagation(); selectCategory('хищные')">Заказать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2 class="section-title">О НАС</h2>
+      <div class="about-content">
+        <p>Мы команда профессионалов в стиле "Охотники за привидениями" - быстро, эффективно и безопасно!</p>
+        <ul class="features">
+          <li>✅ Работаем 24/7</li>
+          <li>✅ Гарантия до 3 лет</li>
+          <li>✅ Экологичные средства</li>
+          <li>✅ Расчёт до прибытия</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 class="section-title">СВЯЗАТЬСЯ С НАМИ</h2>
+      <div class="contact-buttons">
+        <button class="contact-btn telegram" onclick="contactVia('telegram')">Telegram</button>
+        <button class="contact-btn whatsapp" onclick="contactVia('whatsapp')">WhatsApp</button>
+        <button class="contact-btn phone" onclick="contactVia('phone')">Позвонить</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Вызов эксперта</h2>
+      <form id="orderForm" onsubmit="submitForm(event)">
+        <input type="hidden" id="selectedCategory" name="category">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="tel" name="phone" placeholder="Телефон" required>
+        <input type="text" name="address" placeholder="Адрес" required>
+        <textarea name="comment" placeholder="Дополнительно о проблеме"></textarea>
+        <button type="submit" class="submit-btn">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Ghost Exterminators. Все привидения и насекомые под контролем!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
