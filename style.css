@@ -524,3 +524,35 @@ body {
 .mini-cta:hover {
   box-shadow: 0 0 15px var(--neon-green);
 }
+
+/* Ghostbusters Banner */
+.banner {
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 10px;
+  border-radius: 15px;
+  background: rgba(10, 10, 30, 0.5);
+  box-shadow: 0 0 25px var(--neon-green);
+}
+
+.banner-svg {
+  width: 100%;
+  height: auto;
+}
+
+.banner-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(24px, 4vw, 40px);
+  fill: url(#neonGradient);
+  font-weight: 900;
+  letter-spacing: 5px;
+  animation: flicker 2s infinite;
+}
+
+.banner-subtext {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(14px, 2vw, 20px);
+  fill: var(--neon-yellow);
+  letter-spacing: 2px;
+}
