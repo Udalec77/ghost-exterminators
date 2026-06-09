@@ -556,3 +556,10 @@ body {
   fill: var(--neon-yellow);
   letter-spacing: 2px;
 }
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px var(--neon-green);
+}
