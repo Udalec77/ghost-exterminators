@@ -557,10 +557,14 @@ body {
   letter-spacing: 2px;
 }
 
+
+
 .banner-img {
   width: 100%;
+  max-height: 400px;
   height: auto;
+  object-fit: contain;
   border-radius: 10px;
   box-shadow: 0 0 20px var(--neon-green);
+  background: rgba(0, 0, 0, 0.3);
 }
-
