@@ -34,6 +34,33 @@
     <section id="services" class="services">
       <h2 class="section-title">НАШИ УСЛУГИ</h2>
       <div class="interactive-grid">
+        <!-- Насекомые -->
+        <div class="flip-card" onclick="toggleCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="card-icon">🪳</div>
+              <h3>НАСЕКОМЫЕ</h3>
+              <p>Клопы, тараканы, муравьи, мухи, комары, осы, шершни, блохи, моль, жуки</p>
+              <div class="ghost-overlay">👻</div>
+            </div>
+            <div class="flip-card-back">
+              <h4>НАСЕКОМЫЕ</h4>
+              <ul class="pest-list">
+                <li>🪳 Клопы</li>
+                <li>🪲 Тараканы</li>
+                <li>🐜 Муравьи</li>
+                <li>🪰 Мухи</li>
+                <li>🦟 Комары</li>
+                <li>🐝 Осы и шершни</li>
+                <li>🩷 Блохи</li>
+                <li>🦋 Моль</li>
+                <li>🐛 Жуки-древоточцы</li>
+              </ul>
+              <button class="mini-cta" onclick="event.stopPropagation(); selectCategory('насекомые')">Заказать</button>
+            </div>
+          </div>
+        </div>
+
         <!-- Грызуны -->
         <div class="flip-card" onclick="toggleCard(this)">
           <div class="flip-card-inner">
@@ -50,54 +77,8 @@
                 <li>🐭 Мыши</li>
                 <li>🐿️ Полевки</li>
                 <li>🐀 Домашняя крыса</li>
-                <li>🦫 Шиповка (бережно!)</li>
               </ul>
               <button class="mini-cta" onclick="event.stopPropagation(); selectCategory('грызуны')">Заказать</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Насекомые -->
-        <div class="flip-card" onclick="toggleCard(this)">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <div class="card-icon">🪳</div>
-              <h3>НАСЕКОМЫЕ</h3>
-              <p>Тараканы, клопы, муравьи</p>
-              <div class="ghost-overlay">👻</div>
-            </div>
-            <div class="flip-card-back">
-              <h4>НАСЕКОМЫЕ</h4>
-              <ul class="pest-list">
-                <li>🦀 Клопы</li>
-                <li>🪳 Тараканы</li>
-                <li>🐜 Муравьи</li>
-                <li>🦋 Цыплята</li>
-                <li>🛏️ Потерношвы</li>
-              </ul>
-              <button class="mini-cta" onclick="event.stopPropagation(); selectCategory('насекомые')">Заказать</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Ящерицы и змеи -->
-        <div class="flip-card" onclick="toggleCard(this)">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <div class="card-icon">🦎</div>
-              <h3>ХИЩНЫЕ</h3>
-              <p>Ящерицы, змеи, зайцы</p>
-              <div class="ghost-overlay">👻</div>
-            </div>
-            <div class="flip-card-back">
-              <h4>ХИЩНЫЕ</h4>
-              <ul class="pest-list">
-                <li>🦎 Ящерицы</li>
-                <li>🐍 Змеи</li>
-                <li>🐰 Зайцы (не дружат с мебелью)</li>
-                <li>🦔 Ежи (спайки)</li>
-              </ul>
-              <button class="mini-cta" onclick="event.stopPropagation(); selectCategory('хищные')">Заказать</button>
             </div>
           </div>
         </div>
