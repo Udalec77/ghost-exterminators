@@ -28,7 +28,7 @@ function selectCategory(category) {
   document.getElementById('selectedCategory').value = category;
   // Close all flipped cards
   document.querySelectorAll('.flip-card').forEach(card => {
-    card.classList.remove('flipped');
+    card.classList.remove('flipped', 'flipped-back');
   });
   openModal();
 }
