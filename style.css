@@ -169,6 +169,15 @@ body {
   text-align: center;
   color: var(--neon-yellow);
   text-shadow: 0 0 10px var(--neon-yellow);
+  margin-bottom: 20px;
+}
+
+.neon-subtitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(18px, 2.5vw, 28px);
+  text-align: center;
+  color: var(--neon-green);
+  text-shadow: 0 0 10px var(--neon-green);
   margin-bottom: 50px;
 }
 
@@ -428,7 +437,7 @@ body {
   background: transparent;
   border-radius: 15px;
   cursor: pointer;
-  height: 300px;
+  height: 380px;
   perspective: 1000px;
 }
 
@@ -463,6 +472,11 @@ body {
   box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
 }
 
+.flip-card.flipped-back .flip-card-front {
+  border-color: var(--neon-yellow);
+  box-shadow: 0 0 25px rgba(255, 255, 0, 0.4);
+}
+
 .flip-card-back {
   background: linear-gradient(135deg, #1a002a 0%, var(--card-bg) 100%);
   border: 2px solid var(--neon-yellow);
@@ -477,6 +491,30 @@ body {
 
 .flip-card.flipped .card-icon {
   display: none;
+}
+
+.card-icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.flip-card.flipped-back .card-icon-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  height: 3px;
+  background: var(--neon-green);
+  border-radius: 2px;
+  box-shadow: 0 0 8px var(--neon-green), 0 0 12px var(--neon-green);
+  animation: emblemPulse 1.5s infinite;
+}
+
+@keyframes emblemPulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--neon-green), 0 0 12px var(--neon-green); }
+  50% { opacity: 0.6; box-shadow: 0 0 4px var(--neon-green), 0 0 8px var(--neon-green); }
 }
 
 .ghost-overlay {

@@ -14,7 +14,13 @@ function closeModal() {
 
 // Toggle flip card
 function toggleCard(card) {
+  const wasFlipped = card.classList.contains('flipped');
   card.classList.toggle('flipped');
+  if (!wasFlipped) {
+    card.classList.add('flipped-back');
+  } else {
+    card.classList.remove('flipped-back');
+  }
 }
 
 // Select category from card
