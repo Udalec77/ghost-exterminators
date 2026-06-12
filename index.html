@@ -33,30 +33,29 @@
 
   <main>
     <section id="services" class="services">
-      <h2 class="section-title">НАШИ УСЛУГИ</h2>
-      <p class="neon-subtitle">Мы вас избавим от:</p>
+      <h2 class="section-title">Мы вас избавим от:</h2>
       <div class="interactive-grid">
         <!-- Насекомые -->
         <div class="flip-card" onclick="toggleCard(this)">
+          <div class="card-icon-overlay">
+            <div class="card-icon">🪳</div>
+            <span class="ghost-overlay">👻</span>
+            <span class="cross-out"></span>
+          </div>
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <div class="card-icon-wrapper">
-                <div class="card-icon">🪳</div>
-                <span class="ghost-overlay">👻</span>
-                <span class="cross-out"></span>
-              </div>
               <h3>НАСЕКОМЫЕ</h3>
             </div>
             <div class="flip-card-back">
               <h4>НАСЕКОМЫЕ</h4>
               <ul class="pest-list">
-                <li>🪳 Клопы</li>
                 <li>🪲 Тараканы</li>
+                <li>🪳 Клопы</li>
                 <li>🐜 Муравьи</li>
                 <li>🪰 Мухи</li>
                 <li>🦟 Комары</li>
                 <li>🐝 Осы и шершни</li>
-                <li>🩷 Блохи</li>
+                <li>🪲 Блохи</li>
                 <li>🦋 Моль</li>
                 <li>🐛 Жуки-древоточцы</li>
               </ul>
@@ -67,13 +66,13 @@
 
         <!-- Грызуны -->
         <div class="flip-card" onclick="toggleCard(this)">
+          <div class="card-icon-overlay">
+            <div class="card-icon">🐀</div>
+            <span class="ghost-overlay">👻</span>
+            <span class="cross-out"></span>
+          </div>
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <div class="card-icon-wrapper">
-                <div class="card-icon">🐀</div>
-                <span class="ghost-overlay">👻</span>
-                <span class="cross-out"></span>
-              </div>
               <h3>ГРЫЗУНЫ</h3>
             </div>
             <div class="flip-card-back">
@@ -82,7 +81,7 @@
                 <li>🐀 Крысы</li>
                 <li>🐭 Мыши</li>
                 <li>🐿️ Полевки</li>
-                <li>🦔 Крот</li>
+                <li>🐹 Кроты</li>
               </ul>
               <button class="mini-cta" onclick="event.stopPropagation(); selectCategory('грызуны')">Заказать</button>
             </div>

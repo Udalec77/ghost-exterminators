@@ -160,7 +160,7 @@ body {
 
 /* Services Section */
 .services {
-  padding: 80px 5%;
+  padding: 40px 5% 80px;
 }
 
 .section-title {
@@ -169,15 +169,6 @@ body {
   text-align: center;
   color: var(--neon-yellow);
   text-shadow: 0 0 10px var(--neon-yellow);
-  margin-bottom: 20px;
-}
-
-.neon-subtitle {
-  font-family: 'Orbitron', sans-serif;
-  font-size: clamp(18px, 2.5vw, 28px);
-  text-align: center;
-  color: var(--neon-green);
-  text-shadow: 0 0 10px var(--neon-green);
   margin-bottom: 50px;
 }
 
@@ -423,6 +414,7 @@ body {
     opacity: 0;
   }
 }
+
 /* Interactive Flip Cards */
 .interactive-grid {
   display: grid;
@@ -439,6 +431,7 @@ body {
   cursor: pointer;
   height: 380px;
   perspective: 1000px;
+  position: relative;
 }
 
 .flip-card-inner {
@@ -470,6 +463,7 @@ body {
   background: var(--card-bg);
   border: 2px solid var(--neon-green);
   box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+  padding-top: 130px;
 }
 
 .flip-card.flipped-back .flip-card-front {
@@ -485,15 +479,28 @@ body {
 
 .card-icon {
   font-size: 80px;
-  margin-bottom: 20px;
   transition: all 0.5s;
 }
 
-.card-icon-wrapper {
-  position: relative;
-  display: inline-block;
+.card-icon-overlay {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
   width: 120px;
   height: 120px;
+  pointer-events: none;
+}
+
+.card-icon-overlay .card-icon {
+  font-size: 80px;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
 
 .cross-out {
@@ -525,31 +532,12 @@ body {
   opacity: 0;
   transition: opacity 0.4s;
   pointer-events: none;
-  z-index: 2;
+  z-index: 3;
   filter: drop-shadow(0 0 8px #00ff41);
 }
 
 .flip-card.flipped-back .ghost-overlay {
   opacity: 1;
-}
-
-.ghost-overlay {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  opacity: 0;
-  transition: all 0.5s;
-}
-
-.flip-card:hover .ghost-overlay {
-  opacity: 0.5;
-  animation: ghostFloat 2s infinite;
-}
-
-@keyframes ghostFloat {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(5deg); }
 }
 
 .pest-list {
@@ -611,8 +599,6 @@ body {
   fill: var(--neon-yellow);
   letter-spacing: 2px;
 }
-
-
 
 .banner-img {
   width: 100%;
