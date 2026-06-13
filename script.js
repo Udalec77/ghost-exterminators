@@ -36,35 +36,41 @@ function selectCategory(category) {
 // Contact via different channels
 function contactVia(type) {
   if (type === 'phone') {
-    alert('📞 Звоните: +7 (926) 595-42-45');
+    alert('📞 Звоните: +7 (222) 222-22-22');
   } else if (type === 'telegram') {
-    alert('Telegram: @ghostexterminators');
-    // window.open('https://t.me/ghostexterminators', '_blank');
+    alert('Telegram: @udalec77');
+    window.open('https://t.me/udalec77', '_blank');
   } else if (type === 'whatsapp') {
-    alert('WhatsApp: +7 (926) 595-42-45');
-    // window.open('https://wa.me/72222222222', '_blank');
+    alert('WhatsApp: +7 (222) 222-22-22');
   }
 }
 
-// Submit form
+// Submit form -> open Telegram
 function submitForm(event) {
   event.preventDefault();
   const form = event.target;
   const category = document.getElementById('selectedCategory').value;
-  
-  // Анимация отправки
-  const submitBtn = form.querySelector('.submit-btn');
-  submitBtn.textContent = 'Отправляем...';
-  submitBtn.disabled = true;
-  
-  setTimeout(() => {
-    const categoryText = category ? ` (${category})` : '';
-    alert(`✅ Заявка отправлена${categoryText}! Мы свяжемся в течение 15 минут.`);
-    form.reset();
-    closeModal();
-    submitBtn.textContent = 'Отправить заявку';
-    submitBtn.disabled = false;
-  }, 1000);
+
+  const data = {
+    name: (form.name && form.name.value) || '',
+    phone: (form.phone && form.phone.value) || '',
+    address: (form.address && form.address.value) || '',
+    comment: (form.comment && form.comment.value) || '',
+    category: category || ''
+  };
+
+  const text = [
+    'Новая заявка с сайта Ghost Exterminators:',
+    'Имя: ' + data.name,
+    'Телефон: ' + data.phone,
+    'Адрес: ' + data.address,
+    'Категория: ' + data.category,
+    'Комментарий: ' + data.comment
+  ].filter(Boolean).join('\n');
+
+  window.open('https://t.me/udalec77?text=' + encodeURIComponent(text), '_blank');
+  form.reset();
+  closeModal();
 }
 
 // Close modal on outside click
