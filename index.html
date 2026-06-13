@@ -9,14 +9,21 @@
 <body>
   <header class="header">
     <nav class="nav">
-      <div class="logo">
-        <span class="logo-icon">👻</span>
-        <span class="logo-text">GHOST EXTERMINATORS</span>
+      <div class="nav-left">
+        <div class="logo">
+          <span class="logo-icon">👻</span>
+          <span class="logo-text">GHOST EXTERMINATORS</span>
+        </div>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-      <ul class="nav-list">
-        <li><a href="#services">Услуги</a></li>
-        <li><a href="#about">О нас</a></li>
-        <li><a href="#contact">Контакты</a></li>
+      <ul class="nav-list" id="navList">
+        <li><a href="#services" onclick="closeMenu()">Услуги</a></li>
+        <li><a href="#about" onclick="closeMenu()">О нас</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Контакты</a></li>
       </ul>
     </nav>
     <!-- Photo Banner -->
@@ -89,6 +96,67 @@
       </div>
     </section>
 
+
+    <section id="pricing" class="pricing">
+      <h2 class="section-title">УСЛУГИ И ЦЕНЫ</h2>
+      <p class="neon-subtitle">Расчёт до прибытия специалиста-охотника</p>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-icon">🪳</div>
+          <h3>Дезинсекция квартиры</h3>
+          <p>Обработка от насекомых холодным/горячим туманом</p>
+          <div class="price">от 990 ₽</div>
+          <button class="mini-cta" onclick="openModal(); selectCategory('дезинсекция')">Заказать</button>
+        </div>
+        <div class="price-card">
+          <div class="price-icon">🐀</div>
+          <h3>Дератизация</h3>
+          <p>Уничтожение крыс, мышей, полевок</p>
+          <div class="price">от 1 200 ₽</div>
+          <button class="mini-cta" onclick="openModal(); selectCategory('дератизация')">Заказать</button>
+        </div>
+        <div class="price-card">
+          <div class="price-icon">🌪️</div>
+          <h3>Комплексная обработка</h3>
+          <p>Холодный + горячий туман + барьерный гель</p>
+          <div class="price">от 1 500 ₽</div>
+          <button class="mini-cta" onclick="openModal(); selectCategory('комплекс')">Заказать</button>
+        </div>
+        <div class="price-card">
+          <div class="price-icon">🏠</div>
+          <h3>Выезд за МКАД</h3>
+          <p>До 20 км — 500 ₽, до 50 км — 750 ₽, до 100 км — 1 300 ₽</p>
+          <div class="price">от 500 ₽</div>
+          <button class="mini-cta" onclick="openModal(); selectCategory('выезд')">Уточнить</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="how">
+      <h2 class="section-title">КАК МЫ РАБОТАЕМ</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-icon">📞👻</div>
+          <h3>Заявка</h3>
+          <p>Звонок или форма на сайте — бесплатно</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">🚗💨</div>
+          <h3>Выезд</h3>
+          <p>Приезжаем в день обращения за 30-60 минут</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">🧪🔥</div>
+          <h3>Обработка</h3>
+          <p>Холодный + горячий туман, препараты IV класса</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">🛡️✅</div>
+          <h3>Гарантия</h3>
+          <p>До 3 лет на все работы. Официальный договор</p>
+        </div>
+      </div>
+    </section>
     <section id="about" class="about">
       <h2 class="section-title">О НАС</h2>
       <div class="about-content">
