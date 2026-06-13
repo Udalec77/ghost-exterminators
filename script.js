@@ -36,11 +36,11 @@ function selectCategory(category) {
 // Contact via different channels
 function contactVia(type) {
   if (type === 'phone') {
-    window.location.href = 'tel:+72222222222';
+    window.location.href = 'tel:+79265954245';
   } else if (type === 'telegram') {
     window.open('https://t.me/udalec77', '_blank');
   } else if (type === 'whatsapp') {
-    window.open('https://wa.me/72222222222', '_blank');
+    window.open('https://wa.me/79265954245', '_blank');
   }
 }
 
