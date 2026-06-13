@@ -36,12 +36,11 @@ function selectCategory(category) {
 // Contact via different channels
 function contactVia(type) {
   if (type === 'phone') {
-    alert('📞 Звоните: +7 (222) 222-22-22');
+    window.location.href = 'tel:+72222222222';
   } else if (type === 'telegram') {
-    alert('Telegram: @udalec77');
     window.open('https://t.me/udalec77', '_blank');
   } else if (type === 'whatsapp') {
-    alert('WhatsApp: +7 (222) 222-22-22');
+    window.open('https://wa.me/72222222222', '_blank');
   }
 }
 
