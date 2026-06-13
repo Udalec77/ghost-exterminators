@@ -36,12 +36,12 @@ function selectCategory(category) {
 // Contact via different channels
 function contactVia(type) {
   if (type === 'phone') {
-    alert('📞 Звоните: +7 (222) 222-22-22');
+    alert('📞 Звоните: +7 (926) 595-42-45');
   } else if (type === 'telegram') {
     alert('Telegram: @ghostexterminators');
     // window.open('https://t.me/ghostexterminators', '_blank');
   } else if (type === 'whatsapp') {
-    alert('WhatsApp: +7 (222) 222-22-22');
+    alert('WhatsApp: +7 (926) 595-42-45');
     // window.open('https://wa.me/72222222222', '_blank');
   }
 }
